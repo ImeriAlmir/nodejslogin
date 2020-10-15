@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
-
+// all imports
 const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
@@ -16,7 +16,7 @@ initializePassport(
   email => users.find(user => user.email === email),
   id => users.find(user => user.id === id)
 )
-
+//array insted of database 
 const users = []
 
 app.set('view-engine', 'ejs')
